@@ -1,0 +1,53 @@
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Calibri, Arial, sans-serif; margin: 0; background: #f1f5fb; color: #1d2733; font-size: 14px; }
+.layout { display: flex; min-height: 100vh; }
+.sidebar { width: 235px; background: #0b2a5b; color: #cfe0ff; padding: 0 0 20px; flex-shrink: 0; }
+.sidebar .logo { font-weight: bold; font-size: 17px; color: #fff; padding: 18px 18px 12px; border-bottom: 1px solid #1c3f7a; }
+.sidebar .logo small { display: block; font-weight: normal; font-size: 12px; color: #9db8e6; }
+.sidebar .who { padding: 14px 18px; background: #0a2350; color: #fff; font-weight: 600; }
+.sidebar .who .role { display: block; font-weight: normal; font-size: 11px; color: #9db8e6; text-transform: uppercase; letter-spacing: 1px; margin-top: 3px; }
+.sidebar .grp { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #7f9cd0; padding: 16px 18px 6px; }
+.sidebar a { display: block; color: #cfe0ff; text-decoration: none; padding: 9px 18px; margin: 1px 8px; border-radius: 4px; }
+.sidebar a:hover { background: #17407f; color: #fff; }
+.sidebar a.active { background: #2b6fd6; color: #fff; }
+.sidebar a.logout { margin-top: 24px; background: #7b2432; color: #fff; text-align: center; }
+.content { flex: 1; min-width: 0; }
+main { max-width: 1150px; margin: 0 auto; padding: 22px 22px 40px; }
+body > main { margin-top: 40px; }
+h1 { color: #0b2a5b; margin: 0 0 14px; font-size: 24px; }
+h2 { color: #0b2a5b; margin: 28px 0 10px; font-size: 17px; border-bottom: 2px solid #dbe4f3; padding-bottom: 5px; }
+table { border-collapse: collapse; width: 100%; background: #fff; margin: 8px 0; }
+th, td { border-bottom: 1px solid #e4eaf4; padding: 9px 10px; text-align: left; vertical-align: top; }
+th { background: #eaf0fb; color: #0b2a5b; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; }
+.panel, form.box, .box { background: #fff; border: 1px solid #dbe4f3; border-radius: 6px; padding: 14px 16px; margin: 10px 0; }
+.panel table { margin: 0; }
+label { display: block; margin: 9px 0 3px; font-weight: 600; font-size: 13px; }
+input, select, textarea { padding: 8px; border: 1px solid #b8c5dd; border-radius: 4px; font-family: inherit; font-size: 14px; background: #fff; }
+input[type=text], input[type=password], input[type=date], input[type=number], select, textarea { width: 100%; }
+button, .btn { background: #2b6fd6; color: #fff; border: 0; padding: 9px 16px; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; font-size: 14px; }
+button:hover, .btn:hover { background: #1f58b0; }
+.inline input, .inline select { width: auto; }
+.msg { background: #e3f6e8; border: 1px solid #8fd1a1; padding: 10px 14px; margin-bottom: 14px; border-radius: 4px; }
+.warn { color: #c0392b; font-weight: 700; }
+.low { background: #fff3f3; }
+.cards { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+.card { background: #fff; border: 1px solid #dbe4f3; border-left: 4px solid #2b6fd6; border-radius: 6px; padding: 12px 16px; flex: 1 1 150px; }
+.card.red { border-left-color: #d64545; }
+.card.amber { border-left-color: #e0a31a; }
+.card .num { font-size: 26px; font-weight: 700; color: #0b2a5b; }
+.card .lbl { color: #5a6b85; font-size: 13px; }
+.badge { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; }
+.badge.red { background: #fbdada; color: #b3261e; }
+.badge.amber { background: #fdf0c4; color: #946200; }
+.badge.green { background: #dcf3e3; color: #1d7a3d; }
+.bar { background: #e3e8f2; height: 14px; width: 100%; border-radius: 2px; }
+.bar div { background: #2b6fd6; height: 14px; border-radius: 2px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.small { color: #667; font-size: 13px; }
+.act { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid #edf1f8; align-items: center; }
+.act .ico { width: 24px; height: 24px; border-radius: 50%; text-align: center; line-height: 24px; font-weight: bold; font-size: 13px; }
+.act .ico.in { background: #dcf3e3; color: #1d7a3d; }
+.act .ico.out { background: #fbdada; color: #b3261e; }
+.receipt { max-width: 420px; margin: 20px auto; background: #fff; border: 1px dashed #666; padding: 20px; }
+@media (max-width: 800px) { .layout { flex-direction: column; } .sidebar { width: 100%; } .grid2 { grid-template-columns: 1fr; } }
+@media print { .sidebar, .noprint { display: none; } body { background: #fff; } }
